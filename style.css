@@ -1,0 +1,331 @@
+/*Root*/
+:root{
+    /*Root colors*/
+    --color-orange-crayola: #ff6b35; /*(title / heading) */
+    --color-peach: #f7c59f; /*(background)*/
+    --color-beige: #efefd0; /*(background)*/
+    --color-polynesian-blue: #004e89; /*(Navigation bar)*/
+    --color-lapis-lazuli: #1a659e; /*(text)*/     
+    --color-button: #FE938C;/*sotf pink*/ 
+    --color-button-hover: #9CAFB7;/*muteded blue*/
+
+    /*Root size*/
+    --font-title:3rem;
+    --font-subsitle:2rem;
+    --font-paragraph:1rem;
+    --font-button-links:1.5rem;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    list-style: none;
+    text-decoration: none;
+    gap: 30px;
+}
+
+.nav-links li {
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--color-polynesian-blue);
+    text-decoration: none;
+    font-size: var(--font-button-links);
+}
+
+.nav-links a:hover {
+    color: var(--color-peach);
+    text-decoration: overline 1px;
+    text-underline-offset: 4px;
+}
+
+.nav-links a:active {
+    color: var(--color-peach);
+    text-decoration: overline 1px;
+    text-underline-offset: 4px;
+}
+
+/* Home Section */
+#home{
+    background-image: url(./2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 300px;
+    height: 90vh;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.home{
+    text-align: right;
+    padding-top: 15%;
+    padding-right: 100px;
+}
+
+.home-head{
+    font-size: 70px;
+    line-height: 60px;
+}
+
+.home-txt{
+    font-size: var(--font-paragraph);
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.home-btn{
+    font-size: var(--color-button);
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: var(--color-beige);
+    background-color: var(--color-button);
+    box-shadow: 0px 1px 2px #bebebe;
+    border: none;
+}
+
+.home-btn:hover{
+    transition: 0.5s;
+    color: var(--color-peach);
+    background-color: var(--color-button-hover);
+    cursor: pointer;
+}
+
+.home-icons{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+/*pets*/
+.pets {
+  text-align: center;
+}
+
+.pets h1 {
+  font-size: var(--font-title);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-orange-crayola);
+}
+
+.pets p{
+    font-size: var(--font-paragraph);
+    color: var(--color-lapis-lazuli);
+}
+
+.pets-img {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Dashed line connecting the circles */
+.pets-img::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  border-top: 2px dashed #bbb;
+  z-index: 0;
+}
+
+.pet {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.pet img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 2px;
+}
+
+.pet img:hover {    
+    transition: transform 0.5s ease-in-out;    
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/*Care*/
+.care{
+    display: flex;
+    margin-top: 5rem;
+    margin-left: 0%;
+}
+
+.care-img1{
+    height: 400px;
+    width: 250px;
+    padding: 0%;
+    margin: 0%;
+}
+
+.care-content{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 80px 30px 60px;
+}
+
+.care-content h2{
+    padding-bottom: 10px;
+}
+
+.care-content h4{
+    padding-bottom: 15px;
+}
+
+.care-content p{
+    padding-bottom: 20px;
+}
+
+.care-content li{
+    padding-bottom: 10px;
+    list-style-type: none;
+}
+
+
+.care-content button{
+    font-size: var(--color-button);
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: var(--color-beige);
+    background-color: var(--color-button);
+    box-shadow: 0px 1px 2px #bebebe;
+    border: none;
+    width: fit-content;
+}
+
+.care-content button:hover{
+    transition: 0.5s;
+    color: var(--color-peach);
+    background-color: var(--color-button-hover);
+    cursor: pointer;
+}
+
+.care-img2{
+    height: 400px;
+    width: 350px;
+    padding-left: -10px;
+}
+
+/*Services*/
+.service{
+    margin-top: 4rem;
+    display: flex;
+    padding-left: 5%;
+    background-image: url(./3.jpg);
+}
+
+.service-txt {
+    width: 700px;
+    margin-right: 100px;
+    margin-top: 5rem;
+}
+
+.service-txt h1{
+    font-size: var(--font-title);
+    color: var(--color-orange-crayola);
+}
+
+.service-txt h4{
+    margin-top: 10px;
+}
+
+.service-txt p{
+    margin-top: 1rem;
+    font-size: var(--font-paragraph);
+}
+
+.service-txt button{
+    font-size: var(--color-button);
+    padding: 10px 25px;
+    border-radius: 50px;
+    margin-top: 20px;
+    color: var(--color-beige);
+    background-color: var(--color-button);
+    box-shadow: 0px 1px 2px #bebebe;
+    border: none;
+}
+
+.service-txt button:hover{
+    transition: 0.5s;
+    color: var(--color-peach);
+    background-color: var(--color-button-hover);
+    cursor: pointer;
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service1 i,.service4 i{
+    color: var(--color-beige);
+    background-color: var(--color-button-hover);
+    border-radius: 50%;
+}
+
+.service2 i,.service3 i{
+    color: var(--color-beige);
+    background-color: var(--color-button);
+    border-radius: 50%;
+}
+
+.services h2{
+    color: var(--color-polynesian-blue);
+    font-size: var(--font-button-links);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.service1,.service2,.service3,.service4{
+    height: 250px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 2px 2px white;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    line-height: 1.2rem;
+    margin: 1rem;
+}
+
+.service1:hover, .service2:hover, .service3:hover, .service4:hover{
+    transition: transform 0.5s ease-in-out;    
+    transform: scale(1.05);
+}
+
