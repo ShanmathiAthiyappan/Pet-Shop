@@ -12,10 +12,10 @@
     --color-lightgray: lightgray;
 
     /*Root size*/
-    --font-title:5rem;
-    --font-subsitle:4rem;
-    --font-paragraph:2rem;
-    --font-button-links:3rem;
+    --font-title:3rem;
+    --font-subsitle:2rem;
+    --font-paragraph:1rem;
+    --font-button-links:1.2rem;
 }
 
 /* Reset & Base */
@@ -196,16 +196,17 @@ button:hover{
 }
 
 .care-img1{
-    height: 400px;
-    width: 250px;
-    padding: 0%;
-    margin: 0%;
+    align-self: flex-end;
+    height: 350px;
+    width: 350px;
+    padding: 0% !important;
+    margin: 0%  !important;
 }
 
 .care-content{
     display: flex;
     flex-direction: column;
-    padding: 30px 80px 30px 60px;
+    padding: 30px 80px 30px 40px;
 }
 
 .care-content h2{
@@ -227,7 +228,7 @@ button:hover{
 }
 
 .care-img2{
-    height: 400px;
+    height: 430px;
     width: 350px;
 }
 
@@ -255,6 +256,7 @@ button:hover{
 
 .service-txt h2{
     margin-top: 10px;
+    color: var(--color-lapis-lazuli);
 }
 
 .service-txt p{
@@ -294,11 +296,13 @@ button:hover{
     padding: 10px;
     border-radius: 20px;
     margin: 1rem;
+    transform: skew(-8deg);
+    cursor: pointer;
 }
 
 .service1:hover, .service2:hover, .service3:hover, .service4:hover{
-    transition: transform 0.5s ease-in-out;    
-    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out; 
+    transform: skew(-7deg);
 }
 
 .service1 p,.service2 p,.service3 p,.service4 p{
@@ -309,6 +313,11 @@ button:hover{
     margin: 5%;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.products h1{
+    font-size: var(--font-title);
+    color: var(--color-orange-crayola);
 }
 
 .product-imgs{
@@ -357,6 +366,7 @@ button:hover{
     -ms-transform: translate(-50%, -50%);
     text-align: center;
     padding: 10px;
+    font-size: medium;
 }
 
 .product-box:hover button{
@@ -365,50 +375,112 @@ button:hover{
 
 .offer img{
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 50px;
     height: 400px;
-    width: 500px;
+    width: 350px;
 }
 
 #team{
     text-align: center;
 }
 
+#team h1{
+    font-size: var(--font-title);
+    color: var(--color-orange-crayola);
+}
+
 .team-members {
-    position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+.member {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px 2px lightgray;
   text-align: center;
+  transition: transform 0.5s ease-in-out;
 }
 
-.container:hover .image {
+.member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Overlay info */
+.member-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.member-info h2 {
+  margin: 0;
+  color: #1a659e;
+  font-size: var(--font-subsitle);
+}
+
+.member-info p {
+  margin-bottom: 15px;
+  font-size: var(--font-paragraph);
+}
+
+/* Social icons - fixed at the bottom */
+.member-info div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-peach);
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 7px 0;
+  border-radius: 0 0 20px 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(30px);
+}
+
+.member-info div a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.member-info div a:hover {
+  transform: scale(1.2);
+}
+
+/* Hover effects */
+.member:hover img {
   opacity: 0.3;
 }
 
-.container:hover .middle {
+.member:hover .member-info {
   opacity: 1;
 }
 
-.text {
-  background-color: #04AA6D;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
+.member:hover .member-info div {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.member:hover {
+  transform: scale(1.03);
 }
