@@ -68,6 +68,7 @@ button:hover{
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
+    overflow-x: scroll;
 }
 
 .nav-links {
@@ -123,6 +124,7 @@ button:hover{
 .home-head{
     font-size: 70px;
     line-height: 60px;
+    overflow-y: hidden;
 }
 
 .home-txt{
@@ -205,6 +207,10 @@ button:hover{
   z-index: 1;
 }
 
+.pet h4{
+    font-size: var(--font-paragraph);
+}
+
 .pet img {
   width: 100px;
   height: 100px;
@@ -243,6 +249,10 @@ button:hover{
         width: 70px;
         height: 70px;
     }
+
+    .pet h4{
+        font-size: var(--font-paragraphs);
+    }
 }
 
 /*--------------------------------------------------Care--------------------------------------------------*/
@@ -250,6 +260,16 @@ button:hover{
     display: flex;
     margin-top: 5rem;
     margin-left: 0%;
+}
+
+.cares{
+    display: flex;
+    background-color: var(--color-beige);
+    width: 900px;
+    border-bottom-right-radius: 170px;
+    border-top-right-radius: 370px;
+    height: fit-content;
+    padding-right: 50px;
 }
 
 .care-img1{
@@ -287,9 +307,77 @@ button:hover{
 .care-img2{
     height: 430px;
     width: 350px;
+    align-self: flex-end;
 }
 
-/*Services*/
+@media screen and (max-width: 640px){
+    .care-img1{
+        height: 100px;
+        width: 80px !important;
+    }
+
+    .care-content{
+        padding: 0px;
+        padding-right: 0% !important;
+    }
+
+    .cares{
+        width: 400px;        
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 140px;        
+        padding-right: 0px;
+    }
+
+    .care-img2{
+        height: 300px;
+        width: 110px !important;
+    }
+}
+
+@media screen and (max-width: 1007px){
+    .care{
+        width: 200px;
+    }
+
+    .care-img1{
+        height: 200px;
+        width: 400px;
+    }
+
+    .care-content{
+        padding: 15px 40px 15px 10px;
+    }
+
+    .care-content h2{
+        font-size: var(--font-titles);
+        padding-bottom: 5px;
+    }
+    
+    .care-content h4{
+        padding-bottom: 10px;
+    }
+    
+    .care-content p{
+        font-size: var(--font-subsitles);
+        padding-bottom: 10px;
+    }
+    
+    .care-content li{
+        font-size: var(--font-paragraphs);
+        padding-bottom: 5px;
+    }
+
+    .care-content buttonn{
+        font-size: var(--font-button-links);
+    }
+
+    .care-img2{
+        height: 300px;
+        width: 200px;
+    }
+}
+
+/*--------------------------------------------------Services--------------------------------------------------*/
 #service{
     margin-top: 4rem;
     padding-top: 2rem;
@@ -303,7 +391,6 @@ button:hover{
     width: 700px;
     margin-right: 100px;
     margin-top: 5rem;
-    line-height: 35px;
 }
 
 .service-txt h1{
@@ -318,6 +405,7 @@ button:hover{
 
 .service-txt p{
     margin-top: 1rem;
+    font-size: var(--font-paragraph);
 }
 
 .services{
@@ -364,12 +452,60 @@ button:hover{
 
 .service1 p,.service2 p,.service3 p,.service4 p{
     line-height: 25px;
+    font-size: var(--font-paragraph);
 }
 
+@media screen and (max-width: 640px){
+    .service1,.service2,.service3,.service4{
+        height: fit-content !important;
+        width: fit-content !important;
+    }
+}
+
+@media screen and (max-width: 1007px){
+    #service{
+        display: block;
+        margin-top: 2rem;
+        padding: auto;
+        text-align: center !important;
+    }
+
+    .service-txt {
+        text-align: center !important;
+        width: auto;
+        margin-top: 1rem;
+        padding: auto;
+    }
+
+    .service-txt button{
+        margin-top: 15px;
+    }
+
+    .service-txt h1{
+        font-size: var(--font-titles);
+    }
+
+    .services h2{
+        font-size: var(--font-button-links);
+    }
+
+    .service-txt p{
+        font-size: var(--font-paragraphs);
+    }
+
+    .service1 p,.service2 p,.service3 p,.service4 p{
+        font-size: var(--font-paragraphs);
+    }
+
+    .service1,.service2,.service3,.service4{
+        height: 200px;
+        width: 250px;
+    }
+}
+
+/*--------------------------------------------------Products--------------------------------------------------*/
 #product{
-    margin: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 5% 10%;
 }
 
 .products h1{
@@ -380,15 +516,15 @@ button:hover{
 .product-imgs{
     display: flex; 
     width: 700px; 
-    height: 350px; 
-    overflow-y: hidden; 
-    overflow-x:scroll;
+    height: 350px;
+    overflow-y: hidden;
+    overflow-x: scroll !important;
 }
 
 .product-imgs img{
     padding: 30px 10px;
     height: 200px;
-    width: 200px;
+    width: 200px; 
     opacity: 1;
     display: block;
     transition: .5s ease;
@@ -437,6 +573,59 @@ button:hover{
     width: 350px;
 }
 
+@media screen and (max-width: 640px){
+    .product-imgs{
+        width: 240px !important; 
+        height: 300px; 
+        color: aqua;
+    }
+    
+    .product-imgs img{
+        padding: 20px 5px;
+        height: 200px;
+        width: 200px;
+    }
+
+    .offer img{
+        margin-left: 20px;
+        height: 350px;
+        width: 250px !important;
+    }
+}
+
+@media screen and (max-width: 1007px){
+    #product{
+        margin: 5% 7%;
+    }
+    
+    .products h1{
+        font-size: var(--font-titles);
+    }
+
+    .products p{
+        padding-top: 20px;
+        font-size: var(--font-subsitles);
+    }
+
+    .product-imgs{
+        width: 450px; 
+        height: 300px; 
+    }
+    
+    .product-imgs img{
+        padding: 20px 5px;
+        height: 200px;
+        width: 200px;
+    }
+
+    .offer img{
+        margin-left: 40px;
+        height: 350px;
+        width: 270px;
+    }
+}
+
+/*--------------------------------------------------Products--------------------------------------------------*/
 #team{
     text-align: center;
 }
@@ -541,4 +730,38 @@ button:hover{
 
 .member:hover {
   transform: scale(1.03);
+}
+
+@media screen and (max-width: 640px){
+    .team-members {
+      gap: 20px !important;
+    }
+
+    .member {
+      width: 150px !important;
+      height: 200px;
+    }
+}
+
+@media screen and (max-width: 1007px){
+    #team h1{
+        font-size: var(--font-titles);
+    }
+
+    .team-members {
+      gap: 25px;
+    }
+
+    .member {
+      width: 200px;
+      height: 250px;
+    }
+
+    .member-info h2 {
+      font-size: var(--font-subsitles);
+    }
+    
+    .member-info p {
+      font-size: var(--font-paragraphs);
+    }
 }
