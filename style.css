@@ -567,29 +567,29 @@ button:hover{
 }
 
 .offer img{
-    margin-top: 20px;
-    margin-left: 50px;
-    height: 400px;
-    width: 350px;
+    margin-top: 40px;
+    margin-left: 40px;
+    height: 350px;
+    width: 230px;
 }
 
 @media screen and (max-width: 640px){
     .product-imgs{
         width: 240px !important; 
         height: 300px; 
-        color: aqua;
     }
     
     .product-imgs img{
-        padding: 20px 5px;
+        padding: 20px 10px;
+        margin
         height: 200px;
         width: 200px;
     }
 
     .offer img{
-        margin-left: 20px;
+        margin-left: 10px !important;
         height: 350px;
-        width: 250px !important;
+        width: 200px !important;
     }
 }
 
