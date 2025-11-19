@@ -1,4 +1,4 @@
-/*-------------------------------------------------Root-------------------------------------------------*/
+/*--------------------------------------------------Root--------------------------------------------------*/
 :root{
     /*Root colors*/
     --color-orange-crayola: #ff6b35; /*(title / heading) */
@@ -40,7 +40,7 @@ p{
 button{
     font-size: var(--font-button-link);
     padding: 10px 25px;
-    border-radius: 50px;
+    border-radius: 50px !important;
     color: var(--color-beige) !important;
     background-color: var(--color-button);
     box-shadow: 0px 1px 2px #bebebe;
@@ -196,7 +196,7 @@ button:hover{
   position: absolute;
   top: 50%;
   left: 5%;
-  right: 5%;
+  right: 5% ;
   border-top: 2px dashed #bbb;
   z-index: 0;
 }
@@ -296,7 +296,7 @@ button:hover{
 }
 
 .care-content p{
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .care-content li{
@@ -566,11 +566,39 @@ button:hover{
     opacity: 1;
 }
 
+.offer:hover img{
+    opacity: 0.3;
+}
+
 .offer img{
     margin-top: 40px;
     margin-left: 40px;
     height: 350px;
     width: 230px;
+    border-radius: 3%;
+}
+
+.offer:hover{
+    transition: transform 0.3s ease-in-out;    
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.offer p{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    font-size: medium;
+}
+
+.offer:hover p{
+    opacity: 1;
 }
 
 @media screen and (max-width: 640px){
@@ -765,6 +793,7 @@ button:hover{
     }
 }
 
+/*--------------------------------------------------details--------------------------------------------------*/ 
 #counts{
     background-image: url(./10.jpg);
     background-position: center;
@@ -780,6 +809,37 @@ button:hover{
     padding: 90px 50px;
 }
 
+@media screen and (max-width: 1007px){
+    .count1,.count2,.count3,.count4{
+        padding: 70px 35px;
+    }
+
+    #counts h1{
+        font-size: larger;
+    }
+
+    #counts h3{
+        font-size: medium;
+        font-weight: lighter;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .count1,.count2,.count3,.count4{
+    padding: 45px 20px;
+    }
+
+    #counts h1{
+        font-size: medium;
+    }
+
+    #counts h3{
+        font-size: small;
+        font-weight: lighter;
+    }
+}
+
+/*--------------------------------------------------details--------------------------------------------------*/ 
 #clients {
   margin-top: 5%;
   padding: 30px 100px;
@@ -800,7 +860,7 @@ button:hover{
 
 .client-box {
   width: 400px;
-  background-color: whitesmoke;
+  background-color: #f0f0f0;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -823,24 +883,76 @@ button:hover{
 
 /* --- Custom indicator bar style (like your image) --- */
 .carousel-indicators {
-  bottom: -40px;
+    bottom: -40px;
 }
 
 .carousel-indicators [data-bs-target] {
-  width: 50px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  transition: all 0.3s ease;
+    width: 70px !important;
+    height: 3px !important;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.3s ease;
 }
 
 .carousel-indicators .active {
-  background-color: #fff;
-  width: 60px;
+    background-color: var(--color-orange-crayola) !important;
+    width: 60px;
 }
 
 
+@media screen and (max-width: 1007px){
+    #clients {
+        padding: 30px 60px;
+    }
+
+    .carousel-item{
+        display: flex;
+    }
+
+    .client-box {
+        width: 220px;
+        padding: 10px;
+      }
+
+    .client-box img {
+        width: 40px;
+        height: 40px;
+        padding: 3px;
+      }
+    
+    .client-box h1 {
+        font-size: 1.2rem;
+        margin-top: 10px;
+      }
+}
+
+@media screen and (max-width: 640px){
+    #clients {
+        padding: 30px 30px;
+    }
+
+    .carousel-item{
+        display: flex;
+    }
+
+    .client-box {
+        width: 170px;
+        padding: 10px;
+      }
+
+    .client-box img {
+        width: 40px;
+        height: 40px;
+        padding: 3px;
+      }
+    
+    .client-box h1 {
+        font-size: 1.2rem;
+        margin-top: 10px;
+      }
+}
+
+/*--------------------------------------------------details--------------------------------------------------*/
 #details{
     display: flex;
     background-image: url(.);
@@ -849,36 +961,123 @@ button:hover{
     background-size: cover;
     align-items: center;
     margin-top: 40px;
-    padding: 50px 250px;
+    padding: 50px 50px;
+}
+
+.gal-con{
+    display: flex;
+}
+
+#details h2{
+    padding-bottom: 15px;
+    color: var(--color-orange-crayola);
 }
 
 .about{
-    width: 400px;
+    width: 600px;
     margin: auto 20px;
 }
 
 .gallery{
-    width: 450px;
+    width: 400px;
     margin: auto 20px;
 }
 
 .gallery img{
-    height: 70px;
-    width: 70px;
-    border-radius: 5px;
+    height: 90px;
+    width: 90px;
+    padding: 3px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover{
+    transform: scale(1.1);
 }
 
 .contact{
-    width: 300px;
+    width: 400px;
     margin: auto 20px;
 }
 
+@media screen and (max-width: 1007px){
+    #details{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gal-con{
+        display: flex;
+    }
+
+    #details h2{
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .about{
+        width: 750px;
+    }
+
+    .gallery{
+        width: 350px;
+    }
+
+    .gallery-imgs{
+        width: 350px;
+    }
+
+    .gallery img{
+        height: 70px;
+        width: 70px;
+    }
+    
+    .contact{
+        width: 350px;
+        padding-left: 5px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    #details{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gal-con{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about{
+        width: 400px;
+    }
+
+    .gallery{
+        width: 400px;
+    }
+
+    .gallery-imgs{
+        width: 350px;
+    }
+
+    .gallery img{
+        height: 70px;
+        width: 70px;
+    }
+    
+    .contact{
+        width: 400px;
+    }
+}
+
 footer{
+    background-color: var(--color-lapis-lazuli);
     display: flex;
-    padding: 20px 1px;
+    padding: 20px 1px 10px 1px;
     justify-content: center;
     color: white;
-    position: static;
+    overflow-x: hidden;
 }
 
 footer p{
@@ -903,4 +1102,25 @@ footer a:hover{
     color: var(--color-beige);
     text-decoration: underline;
     font-weight: bold;
+}
+
+@media screen and (max-width: 1007px){
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer ul{
+        display: flex;        
+    }
+    
+    footer a{
+        margin: 10px 20px;
+    }
+
+    .foot-icons{
+        display: flex;
+        flex-direction: row !important;
+        margin: auto 70px;
+    }
 }
